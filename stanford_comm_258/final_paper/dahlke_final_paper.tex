@@ -1,0 +1,405 @@
+\documentclass[12pt,]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
+\usepackage[]{mathpazo}
+
+
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+
+
+
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\renewenvironment{abstract}
+ {{%
+    \setlength{\leftmargin}{0mm}
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \relax}
+ {\endlist}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+%  \null
+%  \vskip 2em%
+%  \begin{center}%
+  \let \footnote \thanks
+    {\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
+}
+%\fi
+\makeatother
+
+
+
+
+\setcounter{secnumdepth}{0}
+
+\usepackage{longtable,booktabs}
+
+
+
+\title{Regime Change and Information Control  }
+
+
+
+\author{\Large Ross Dahlke\vspace{0.05in} \newline\normalsize\emph{}  }
+
+
+\date{}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\itshape}
+\titleformat*{\subsubsection}{\normalsize\itshape}
+\titleformat*{\paragraph}{\normalsize\itshape}
+\titleformat*{\subparagraph}{\normalsize\itshape}
+
+
+
+
+
+\newtheorem{hypothesis}{Hypothesis}
+\usepackage{setspace}
+
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{graphicx}
+
+% move the hyperref stuff down here, after header-includes, to allow for - \usepackage{hyperref}
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \PassOptionsToPackage{hyphens}{url}\usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \PassOptionsToPackage{hyphens}{url}\usepackage[draft,unicode=true]{hyperref}
+\fi
+}
+
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Ross Dahlke ()},
+             pdfkeywords = {},  
+            pdftitle={Regime Change and Information Control},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+% Add an option for endnotes. -----
+
+
+% add tightlist ----------
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% add some other packages ----------
+
+% \usepackage{multicol}
+% This should regulate where figures float
+% See: https://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned
+\usepackage[section]{placeins}
+
+
+\begin{document}
+	
+% \pagenumbering{arabic}% resets `page` counter to 1 
+%
+% \maketitle
+
+{% \usefont{T1}{pnc}{m}{n}
+\setlength{\parindent}{0pt}
+\thispagestyle{plain}
+{\fontsize{18}{20}\selectfont\raggedright 
+\maketitle  % title \par  
+
+}
+
+{
+   \vskip 13.5pt\relax \normalsize\fontsize{11}{12} 
+\textbf{\authorfont Ross Dahlke} \hskip 15pt \emph{\small }   
+
+}
+
+}
+
+
+
+
+
+
+
+
+\begin{abstract}
+
+    \hbox{\vrule height .2pt width 39.14pc}
+
+    \vskip 8.5pt % \small 
+
+\noindent This paper summarizes literature on a core subject of comparative
+politics: regimes and regime change. In addition, I add a perspective on
+how the literature relates to censorship, propaganda, and information
+control. In total, the main goal of this final paper is to give me an
+opportunity to learn more about the fundamentals of comparative politics
+and layer on top some ideas from the field of mass communication.
+
+
+    \hbox{\vrule height .2pt width 39.14pc}
+
+
+\end{abstract}
+
+
+\vskip -8.5pt
+
+
+ % removetitleabstract
+
+\noindent \doublespacing 
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Method & koRpus & stringi\tabularnewline
+\midrule
+\endhead
+Word count & 1462 & 1472\tabularnewline
+Character count & 9873 & 9872\tabularnewline
+Sentence count & 79 & Not available\tabularnewline
+Reading time & 7.3 minutes & 7.4 minutes\tabularnewline
+\bottomrule
+\end{longtable}
+
+Democracy is a founding principle in the United States and has persisted
+through its history. This collective value has not only meant that
+American have taken their own democracy for granted, it also leads to an
+implicit worldview that centers democracy as the ultimate goal for
+countries around the world. As a result, political scientists have
+historically framed the study of regimes around the world around the
+question: What leads to countries adopting democracy? {[}Need coherent
+thesis{]}
+
+\hypertarget{economic-development-and-democracy}{%
+\section{Economic Development and
+Democracy}\label{economic-development-and-democracy}}
+
+There is a strong correlation between levels of economic development and
+democracy in a country. However, there has been a historical divide on
+the causality of economic development and the creation or maintenance of
+democracy. Przeworski and Limogni (1997) distill two arguments, either
+economic development is ``endogenous'' and spurs the emergence of
+democracy; or it is ``exogenous,'' and democracy emerges independent of
+economic development but is more likely to survive in economically
+developed countries. In other words, economic development either causes
+democratization or maintains democratization caused by other processes.
+
+The endogenous view of economic development and democracy is one of
+modernization. Modernization of countries drives a sequences of events
+of ``industrialization, urbanization, education, communication,
+mobilization, and political incorporation'' (Przeworski and Limongi
+1997). Ultimately, modernization is an accumulation of progressive
+social changes that readies a nation for it's final culmination:
+democracy. Under the endogenous theory of democratization, there is a
+threshold of economic development at which we would expect authoritarian
+regimes to transition to democracy. However, this theory does not hold
+up under empirical testing. Instead, evidence points towards the
+exogenous view of economic development and democracy.
+
+The exogenous view of democratization posits economic development not as
+the driver towards democracy but instead as a maintainer of democracy.
+Lipset (1981) argues that the emergence of democracy is independent of
+economic factors. However, the likelihood of a regime surviving
+increases in more developed nations. Instead of the threshold of
+democratization offered by the endogenous view, there is a threshold of
+stability for regimes. There is a ``U'' shape that develops on the
+likelihood of a dictatorship transitioning to democracy where
+authoritarian regimes with low and high levels modernization are likely
+to persist.
+
+Put together, there is little causal explanatory power of economic
+development bringing down authoritarian regimes and transitioning them
+to democracy. Instead, once established, democracies that are wealthier
+and more modernized are more likely to survive. Further, Lipset even
+went so far as to theorize that democracies are more likely to be
+destabilized when their economies grow quickly. These accelerative
+periods breed ``extremist moments.'' For example, fascism and communism
+were produts of rapid economic development. However, it appears more
+likely that instead of authoritarianism growing during economic
+advancement that democracies fall during economic contractions
+(Przeworski and Limongi 1997).
+
+In summary, economic development does not breed democracies. In
+contrast, there are other factors that cause regime change. It is the
+level of modernization that predicts whether the new government will be
+maintained. In addition, economic crises can lead to democracies falling
+into authoritarian states.
+
+\hypertarget{factors-of-regime-change}{%
+\section{Factors of Regime Change}\label{factors-of-regime-change}}
+
+If economic development does not cause regime change, what does?
+Robinson and Acemoglu (2006) place the struggle between elites and
+citizens as central to the development of democracy. Rustow (1971)
+summarizes a number of explanations for democratization including
+features of the conflict and reconciliation of groups in a society that
+form social and political structure and the need for certain beliefs and
+psychological attitudes among the citizenry.
+
+While it is not economic development \emph{per say} that causes
+nondemocracies to transition to democracy, one possibility is that
+social struggle, largely economic, between elites and citizens drives
+democratization (Robinson and Acemoglu 2006). In this view, these two
+groups have well-defined economic preferences. Elites in a country want
+to maintain authoritarian rule because it provides them with higher
+levels of economic wealth. Whereas the majority of citizens want
+democratic institutions under the assumption that they benefit from them
+and therefore will exert their power in an effort to attain democracy.
+The dueling preferences of these two groups are resolved through an
+inherently conflictual political process where de jure and de facto
+political power is wielded against one another. The balance of power
+between elites and citizens determines whether a society transitions
+from nondemocracy to democracy and perhaps if it reverts back to
+nondemocracy later.
+
+There are factors that can alter the levels of political power
+controlled by citizens and elites (Robinson and Acemoglu 2006). Civil
+society and the effective threat of revolution, particularly the level
+of self-organization of citizens, can shift the balance of power towards
+democracy. Exogenous shocks and crises in a country can create a
+transition of de facto power to citizens and make revolution less costly
+to carry out. The sources of income and composition of wealth, such as
+elites being heavily invested in land versus physical and human capital,
+can create power imbalances that make democratization more likely.
+Political institutions can preemptively use repression to avoid
+democratization. Inter-group inequality, for example if a citizenry is
+divided along racial or religious lines, can make democratization
+more-or-less likely. A large middle class can act as a buffer of
+conflict between elites and the citizens. Globalization can shift elite
+exposure to international financial markets. And political identities
+can create citizens with varying levels of solidarity. All of these
+factors impact the balance of de facto and de jure power that can be
+used by citizens or elites. This balance of power, according to Robinson
+and Acemoglu (2006), is what ultimately create transitions to democracy.
+
+Rustow (1971) offers potential explanations under which democracy can
+thrive. One of these explanations is similar to the democratization
+thesis from Robinsin (2006) in that it insists that conflict and
+reconciliation of conflicts are essential components to democracy. For
+example, there is a vitality of American institutions because of
+citizens' ``multiple memberships in potential groups.'' These
+crosscutting associations mediate American politics and allow different
+coalitions to emerge within the democratic process--a process that is
+self-reinforcing. In addition, Rustow points to arguments that
+democratic stability requires a commitment to democratic values among
+professional politicians. These democratic values are created and
+maintained through politicians' links to one another through ties of
+political organizations.
+
+McFaul's (2002) analysis of the fourth wave of democracy, or
+democratization in a postcommunist world, also hinges on tenant of the
+balance of power dictating transitions to and from democracy.
+Decommunization triggered this fourth wave of regime change, but unlike
+prior waves, the fourth wave produce regime change both to democracy
+\emph{and} dictatorship. The ideological orientation of the more
+powerful party that enjoyed an asymmetrical balance of power in a
+country largely determined the type of regime that emerged out of the
+fourth wave. Therefore, democracy did emerge in some countries, but it
+was only where pro-democracy forces enjoyed a decisive power advantage.
+
+Another potential explanation put forth by Rustow is that there is a
+need for certain beliefs of psychological attitudes among citizens. In
+other words, there is a certain culture of democracy that is needed
+among the masses in order to maintain a democracy. There either needs to
+be a consensus in common beliefs and values or in the procedure to the
+rules of the game. There is an ``agreement to differ.'' There are
+potentially deeper psychological and civic attitudes such as empathy and
+a willingness to participate that underline this culture of democracy.
+However, it just not participate, but also ``traditional or parochial''
+attitudes that are the bedrock of a ``civic culture'' that is necessary
+for democracy.
+
+Huntington's (1991) analysis of Democracy's Third Wave also points to
+culture as being one of the obstacles to democratization. Cultural
+traditions set the attitudes, values, beliefs, and related behavior
+patterns that determine whether a society is conducive to democracy or
+is antidemocratic. Specifically, Huntington points to Confucianism and
+Islam as two cultures which are inherently antidemocratic. He says that
+Confucianism is a culture that emphasizes the collective over the
+individual and there is a lack of traditional rights against the state.
+Unlike America, which has a notion of ``God-given'' rights which are
+unalienable, Confucianism's rights are created by the state. Huntington
+also points to Islam as an inherently antidemocratic culture because of
+the lack of separation between church and state. In Islam, the leader of
+the church is also the leader of the state. Therefore, it is only a
+divine power, not the consent of the governed, that allows for a leader.
+Both of these examples feel to me to be too inductive. It is easy to
+look back on history and create strings that tell a story of the
+present. The same exercise could be applied to post-World War II Germany
+and conclude that German culture is not conducive to democracy. In the
+present, that argument that Germany cannot sustain democracy because of
+its culture seems unfounded.
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-huntington}{}%
+Huntington, Samuel P. 1991. ``Democracy's Third Wave.'' \emph{Journal of
+Democracy}, 12--34.
+
+\leavevmode\hypertarget{ref-lipset}{}%
+Lipset, S. M., and Johns Hopkins University Press. 1981. \emph{Political
+Man: The Social Bases of Politics}. A Johns Hopkins Paperback. Johns
+Hopkins University Press.
+\url{https://books.google.com/books?id=Gv-CAAAAMAAJ}.
+
+\leavevmode\hypertarget{ref-mcfaul}{}%
+McFaul, Michael. 2002. ``The Fourth Wave of Democracy and Dictatorship:
+Noncooperative Transitions in the Postcommunist World.'' \emph{World
+Politics} 54 (2): 212--44. \url{http://www.jstor.org/stable/25054183}.
+
+\leavevmode\hypertarget{ref-przeworski}{}%
+Przeworski, Adam, and Fernando Limongi. 1997. ``Modernization: Theories
+and Facts.'' \emph{World Politics} 49 (2): 155--83.
+\url{https://doi.org/10.1353/wp.1997.0004}.
+
+\leavevmode\hypertarget{ref-robinson}{}%
+Robinson, James A., and Daron Acemoglu. 2006. \emph{Economic Origins of
+Dictatorship and Democracy}. Cambridge, UK: Cambridge University Press;
+Cambridge University Press.
+\url{http://www.cambridge.org/us/catalogue/catalogue.asp?isbn=0521855268}.
+
+\leavevmode\hypertarget{ref-rustow}{}%
+Rustow, Dankwart A. 1971. ``Agreement, Dissent, and Democratic
+Fundamentals.'' In \emph{Theory and Politics/Theorie Und Politik:
+Festschrift Zum 70. Geburtstag Für Carl Joachim Friedrich}, edited by
+Klaus Von Beyme, 328--42. Dordrecht: Springer Netherlands.
+\url{https://doi.org/10.1007/978-94-010-2750-2_17}.
+
+
+
+
+
+\newpage
+\singlespacing 
+\end{document}
