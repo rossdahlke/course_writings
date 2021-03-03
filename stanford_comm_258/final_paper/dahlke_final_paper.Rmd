@@ -1,6 +1,11 @@
 ---
 output:
-  word_document:
+  pdf_document:
+    keep_tex: true
+    fig_caption: true
+    latex_engine: pdflatex
+    template: ../../svm-latex-ms.tex
+#  word_document:
 #always_allow_html: yes
 title: "Regime Change and Information Control"
 thanks: " "
@@ -24,7 +29,7 @@ knitr::opts_chunk$set(include = F, echo = F, warning = F, message = F)
 ```
 
 ```{r include = T}
-wordcountaddin:::text_stats()
+# wordcountaddin:::text_stats()
 ```
 
 Among comparative political scientists, the study of regimes around the world centers on the question: What leads to countries adopting democracy? In comparative politics literature, attempts at answering this question primarily start by examining the relationship between economic development and democratization. I start by examining the economic argument and then move onto non-economic explanations of regime change.
