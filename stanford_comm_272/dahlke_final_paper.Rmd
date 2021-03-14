@@ -1,0 +1,153 @@
+---
+output:
+  pdf_document:
+    keep_tex: true
+    fig_caption: true
+    latex_engine: pdflatex
+    template: ../svm-latex-ms.tex
+#  word_document:
+#always_allow_html: yes
+title: "Retail investors and media psychology"
+thanks: " "
+author:
+- name: Ross Dahlke
+affiliation: Stanford University
+abstract: ""
+keywords: ""
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+geometry: margin=1in
+fontfamily: mathpazo
+fontsize: 12pt
+spacing: double
+bibliography: bibliography.bib
+biblio-style: apsr
+header-includes: \usepackage{graphicx}
+---
+
+```{r echo = F, message = F}
+knitr::opts_chunk$set(include = F, echo = F, warning = F, message = F)
+```
+
+```{r include = T}
+wordcountaddin:::text_stats()
+```
+
+# Abstract
+
+# Introduction
+
+Financial markets were recently upended by massive short squeezes of a cadre of stocks including GameStop, AMC Entertainment Holdings, BlackBerry, and Nokia. The recent events saw historic fluctuations in the prices of these stocks. Individual investors made tens-of-millions of dollars, often with leveraged positions. What is particularly unique about these events is that they were triggered by retail investors. These retail investors, bolstered by financial stimuli and an abundance of free time due to the COVID-19 pandemic, organized collective behavior actions on an internet forum, the Reddit subforum r/WallStreetBets. 
+
+Media commentators quickly offered various perspectives on the events. Is this class warfare? A populist movement? Just some bored, lonely young men trying to make money? There is a deep pool of academic literature that explores the psychological motivations of retail investors and personal finance more broadly. For example, _________. In addition, there is a small, yet robust and powerful set of research on the impacts of media on financial markets. However, I am interest in the media psychology component of financial decisions. I am interested in how media impact financial markets in-so-much-as how the media effects, and is driven by, individual investors. 
+
+More broadly, my research investigates how individuals enter and participate in complex systems. In this case, the totality of the financial markets are beyond comprehension. Investors, particularly small, retail traders, are unlikely to ever fully understand the complex system of global finance. Yet, they do. And as is increasingly common, participants are coordinating activity in order to alter the systems that they participate in. As it pertains to retail investors, I ultimately want to know both _why_ they participate in the markets, and more importantly, _how_ they participate in the financial markets. What is the media ecology that individual investors are exposed to or seek out? How do novice traders come to trust the financial investment advice of various media outlets, communities, or individuals? What do people do after they lose their life savings in GameStop stock? How much time do retail investors devote to trading financial securities? 
+
+## COVID-19 and Retail Traders
+
+The COVID-19 global pandemic has spurred a rise in retail investors that rivals the boom of retail investors during the internet bubble after the rise of discount stock brokerages. At the center of the rise in retail investors is Robinhood. Robinhood is a smart phone app and stock trading platform that offers free trading of stocks and other securities. While other trading platforms have since adopted free trading, Robinhood created and maintained a significant following by being the first to offer free trading, it's gamified user interface, and a target demographic of young, new investors. With Robinhood easing barriers of entry for new investors, financial stimuli from the government due to the pandemic, and newly-found swathes of free-time, these retail investors grew in size and influence during the pandemic. 
+
+Retail investors now routinely account for 20% of stock market activity [@eaton2021] These retail investors on Robinhood significantly impact financial markets, particularly during COVID [@pagano2020]. Users of Robinhood increased the amount of money they invested on the platform during the pandemic [@welch2020]. Robinhood traders primarily engage in both momentum and contrarian strategies where they invest in stocks that have already demonstrated rising price momentum and "buying the dip" where they buy stocks that have recently fallen in price, respectively [@pagano2020]. In other words, Robinhood investors did not panic during broad market turmoil during COVID-19 and often used price drops as buying opportunities. However, in aggregate they do not produce an alpha, or "beat the market" by producing larger-than-average returns [@eaton2021]. Their trades ultimately mostly produce noise in financial markets [@eaton2021]. If all Robinhood investors do is create "noise" in the markets, then the noisiest they've been is when GameStop stock rose dramatically in early 2021. 
+
+## GameStop
+
+In January and February 2021, a handful of stocks experienced an extreme "short-squeeze" which effectively sky-rocketed the prices of these stocks that was caused by decentralized retail investors acting in concert [@lyocsa2021]. The largest movement was seen in GameStop which took most of the attention of the saga. Many investors, both individual and institutional, gained and lost significant sums of money. For a full recapping of the sequence of events, I recommend _________. 
+
+The GameStop saga provides support for the principle that market forces tend to make markets fair, "where fairness is defined as investors 'getting what they pay for' rather than investors 'beating the market'" due to the apparent misvaluation of GameStop and other stocks by institutional investors [@macey2021]. On the other hand, the events also cast doubt as to whether the SEC is achieving its stated goal of maintaining fair, orderly, and efficient markets" [@macey2021].
+
+The retail investors who caused the short squeeze organized on a subforum of the popular website of Reddit called "Wall Street Bets," or r/wallstreetbets [@lyocsa2021]. As a result, the GameStop saga is seen as battle between Wall Street and small, Robinhood traders who are upset at Wall Street. The members of r/wallstreetbets maintained a sense of unity and purpose throughout the events [@dimuzio2021]. Regardless of whether the organized behavior of r/wallstreetbets users is a political movement, hopeful acts of "sticking it to hedgefunds" or something else, they have demonstrated their power to move financial markets [@dimuzio2021]. However, retail investors as whole both bought and "shorted"--or bet that GameStop stock was going to go down--indicating that "the Gamestop frenzy was not a pure digital protest against Wall Street but speculative trading by a group of retail investors, in line with their prior high-risk trading behavior" [@hasso2021].
+
+## r/WallStreetBets 
+
+Wall Street Bets is a subreddit where investors talk about their stock trades. The group is known for their risky "YOLO" (You Only Live Once) trades [@dimuzio2021]. There is a particular language and meme culture that permeates from the group and potentially helps to create their culture of "degeneracy" [@boylston2021]. For example, they celebrate people with "diamond hands" as those who are prepared to hold to their stocks for a long time and decry "paper hands," those who miss out on profits by selling too a stock too early [@wsbshop]. They maintain they are not "dumb," but they are "retarded" or "autists." Although these words are derogatory, they use it as a way to self-deprecate and build unity.
+
+# Information and Media
+
+Efficient market hypothesis
+
+Tetlock: 2011
+
+Attention
+
+Barber and Odean 2008
+
+Engelberg 2008
+
+Antweiler
+
+## Mass Media
+
+Fang 2009
+
+### Wall Street Journal
+
+Barber 1993
+
+Lian 1999
+
+Tetlock 2007
+
+### CNBC/ Mad Money
+
+Keasler 2010
+
+Karniochina 2009
+
+Bolster 2012
+
+Engelberg 2012
+
+Peress 2014
+
+Market efficiency in real time
+
+## New Media
+
+Da 2011
+
+Farrell 2020
+
+Campell 2019
+
+## Social Media
+
+Tumarkin 2001
+
+Antweiler 2004
+
+Echo Chambers
+
+Cookson 2021
+
+Heimer 2016
+
+Jame 2016
+
+Hailiang Chen 
+
+Crawford 2018
+
+Bartov 2018 (sentiment)
+
+Chawla 2016
+
+Sanjiv 2007
+
+Herding and Social Effects
+
+Reddit's self-organised bull runs
+
+Musciotto 2018
+
+Ouimet 2020
+
+Ivkovic 2007
+
+Duflo 2003
+
+Duflo 2002
+
+Shiller 1989
+
+
+
+# References

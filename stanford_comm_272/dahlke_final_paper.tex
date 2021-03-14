@@ -1,0 +1,456 @@
+\documentclass[12pt,]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
+\usepackage[]{mathpazo}
+
+
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+
+
+
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\renewenvironment{abstract}
+ {{%
+    \setlength{\leftmargin}{0mm}
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \relax}
+ {\endlist}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+%  \null
+%  \vskip 2em%
+%  \begin{center}%
+  \let \footnote \thanks
+    {\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
+}
+%\fi
+\makeatother
+
+
+
+
+\setcounter{secnumdepth}{0}
+
+\usepackage{longtable,booktabs}
+
+
+
+\title{Retail investors and media psychology  }
+
+
+
+\author{\Large Ross Dahlke\vspace{0.05in} \newline\normalsize\emph{}  }
+
+
+\date{}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\itshape}
+\titleformat*{\subsubsection}{\normalsize\itshape}
+\titleformat*{\paragraph}{\normalsize\itshape}
+\titleformat*{\subparagraph}{\normalsize\itshape}
+
+
+
+
+
+\newtheorem{hypothesis}{Hypothesis}
+\usepackage{setspace}
+
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{graphicx}
+
+% move the hyperref stuff down here, after header-includes, to allow for - \usepackage{hyperref}
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \PassOptionsToPackage{hyphens}{url}\usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \PassOptionsToPackage{hyphens}{url}\usepackage[draft,unicode=true]{hyperref}
+\fi
+}
+
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Ross Dahlke ()},
+             pdfkeywords = {},  
+            pdftitle={Retail investors and media psychology},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+% Add an option for endnotes. -----
+
+
+% add tightlist ----------
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% add some other packages ----------
+
+% \usepackage{multicol}
+% This should regulate where figures float
+% See: https://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned
+\usepackage[section]{placeins}
+
+
+\begin{document}
+	
+% \pagenumbering{arabic}% resets `page` counter to 1 
+%
+% \maketitle
+
+{% \usefont{T1}{pnc}{m}{n}
+\setlength{\parindent}{0pt}
+\thispagestyle{plain}
+{\fontsize{18}{20}\selectfont\raggedright 
+\maketitle  % title \par  
+
+}
+
+{
+   \vskip 13.5pt\relax \normalsize\fontsize{11}{12} 
+\textbf{\authorfont Ross Dahlke} \hskip 15pt \emph{\small }   
+
+}
+
+}
+
+
+
+
+
+
+\vskip -8.5pt
+
+
+ % removetitleabstract
+
+\noindent \doublespacing 
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Method & koRpus & stringi\tabularnewline
+\midrule
+\endhead
+Word count & 1150 & 1132\tabularnewline
+Character count & 7538 & 7537\tabularnewline
+Sentence count & 54 & Not available\tabularnewline
+Reading time & 5.8 minutes & 5.7 minutes\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{abstract}{%
+\section{Abstract}\label{abstract}}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Financial markets were recently upended by massive short squeezes of a
+cadre of stocks including GameStop, AMC Entertainment Holdings,
+BlackBerry, and Nokia. The recent events saw historic fluctuations in
+the prices of these stocks. Individual investors made tens-of-millions
+of dollars, often with leveraged positions. What is particularly unique
+about these events is that they were triggered by retail investors.
+These retail investors, bolstered by financial stimuli and an abundance
+of free time due to the COVID-19 pandemic, organized collective behavior
+actions on an internet forum, the Reddit subforum r/WallStreetBets.
+
+Media commentators quickly offered various perspectives on the events.
+Is this class warfare? A populist movement? Just some bored, lonely
+young men trying to make money? There is a deep pool of academic
+literature that explores the psychological motivations of retail
+investors and personal finance more broadly. For example,
+\_\_\_\_\_\_\_\_\_. In addition, there is a small, yet robust and
+powerful set of research on the impacts of media on financial markets.
+However, I am interest in the media psychology component of financial
+decisions. I am interested in how media impact financial markets
+in-so-much-as how the media effects, and is driven by, individual
+investors.
+
+More broadly, my research investigates how individuals enter and
+participate in complex systems. In this case, the totality of the
+financial markets are beyond comprehension. Investors, particularly
+small, retail traders, are unlikely to ever fully understand the complex
+system of global finance. Yet, they do. And as is increasingly common,
+participants are coordinating activity in order to alter the systems
+that they participate in. As it pertains to retail investors, I
+ultimately want to know both \emph{why} they participate in the markets,
+and more importantly, \emph{how} they participate in the financial
+markets. What is the media ecology that individual investors are exposed
+to or seek out? How do novice traders come to trust the financial
+investment advice of various media outlets, communities, or individuals?
+What do people do after they lose their life savings in GameStop stock?
+How much time do retail investors devote to trading financial
+securities?
+
+\hypertarget{covid-19-and-retail-traders}{%
+\subsection{COVID-19 and Retail
+Traders}\label{covid-19-and-retail-traders}}
+
+The COVID-19 global pandemic has spurred a rise in retail investors that
+rivals the boom of retail investors during the internet bubble after the
+rise of discount stock brokerages. At the center of the rise in retail
+investors is Robinhood. Robinhood is a smart phone app and stock trading
+platform that offers free trading of stocks and other securities. While
+other trading platforms have since adopted free trading, Robinhood
+created and maintained a significant following by being the first to
+offer free trading, it's gamified user interface, and a target
+demographic of young, new investors. With Robinhood easing barriers of
+entry for new investors, financial stimuli from the government due to
+the pandemic, and newly-found swathes of free-time, these retail
+investors grew in size and influence during the pandemic.
+
+Retail investors now routinely account for 20\% of stock market activity
+(Pagano et al. 2021) These retail investors on Robinhood significantly
+impact financial markets, particularly during COVID (Pagano, Sedunov,
+and Velthuis 2020). Users of Robinhood increased the amount of money
+they invested on the platform during the pandemic (Welch 2020).
+Robinhood traders primarily engage in both momentum and contrarian
+strategies where they invest in stocks that have already demonstrated
+rising price momentum and ``buying the dip'' where they buy stocks that
+have recently fallen in price, respectively (Pagano, Sedunov, and
+Velthuis 2020). In other words, Robinhood investors did not panic during
+broad market turmoil during COVID-19 and often used price drops as
+buying opportunities. However, in aggregate they do not produce an
+alpha, or ``beat the market'' by producing larger-than-average returns
+(Pagano et al. 2021). Their trades ultimately mostly produce noise in
+financial markets (Pagano et al. 2021). If all Robinhood investors do is
+create ``noise'' in the markets, then the noisiest they've been is when
+GameStop stock rose dramatically in early 2021.
+
+\hypertarget{gamestop}{%
+\subsection{GameStop}\label{gamestop}}
+
+In January and February 2021, a handful of stocks experienced an extreme
+``short-squeeze'' which effectively sky-rocketed the prices of these
+stocks that was caused by decentralized retail investors acting in
+concert (Lyócsa, Baumöhl, and Vŷrost 2021). The largest movement was
+seen in GameStop which took most of the attention of the saga. Many
+investors, both individual and institutional, gained and lost
+significant sums of money. For a full recapping of the sequence of
+events, I recommend \_\_\_\_\_\_\_\_\_.
+
+The GameStop saga provides support for the principle that market forces
+tend to make markets fair, ``where fairness is defined as investors
+`getting what they pay for' rather than investors `beating the
+market'\,'' due to the apparent misvaluation of GameStop and other
+stocks by institutional investors (Macey 2021). On the other hand, the
+events also cast doubt as to whether the SEC is achieving its stated
+goal of maintaining fair, orderly, and efficient markets" (Macey 2021).
+
+The retail investors who caused the short squeeze organized on a
+subforum of the popular website of Reddit called ``Wall Street Bets,''
+or r/wallstreetbets (Lyócsa, Baumöhl, and Vŷrost 2021). As a result, the
+GameStop saga is seen as battle between Wall Street and small, Robinhood
+traders who are upset at Wall Street. The members of r/wallstreetbets
+maintained a sense of unity and purpose throughout the events (Muzio
+2021). Regardless of whether the organized behavior of r/wallstreetbets
+users is a political movement, hopeful acts of ``sticking it to
+hedgefunds'' or something else, they have demonstrated their power to
+move financial markets (Muzio 2021). However, retail investors as whole
+both bought and ``shorted''--or bet that GameStop stock was going to go
+down--indicating that ``the Gamestop frenzy was not a pure digital
+protest against Wall Street but speculative trading by a group of retail
+investors, in line with their prior high-risk trading behavior'' (Hasso
+et al. 2021).
+
+\hypertarget{rwallstreetbets}{%
+\subsection{r/WallStreetBets}\label{rwallstreetbets}}
+
+Wall Street Bets is a subreddit where investors talk about their stock
+trades. The group is known for their risky ``YOLO'' (You Only Live Once)
+trades (Muzio 2021). There is a particular language and meme culture
+that permeates from the group and potentially helps to create their
+culture of ``degeneracy'' (Boylston et al. 2021). For example, they
+celebrate people with ``diamond hands'' as those who are prepared to
+hold to their stocks for a long time and decry ``paper hands,'' those
+who miss out on profits by selling too a stock too early (News 2020).
+They maintain they are not ``dumb,'' but they are ``retarded'' or
+``autists.'' Although these words are derogatory, they use it as a way
+to self-deprecate and build unity.
+
+\hypertarget{information-and-media}{%
+\section{Information and Media}\label{information-and-media}}
+
+Efficient market hypothesis
+
+Tetlock: 2011
+
+Attention
+
+Barber and Odean 2008
+
+Engelberg 2008
+
+Antweiler
+
+\hypertarget{mass-media}{%
+\subsection{Mass Media}\label{mass-media}}
+
+Fang 2009
+
+\hypertarget{wall-street-journal}{%
+\subsubsection{Wall Street Journal}\label{wall-street-journal}}
+
+Barber 1993
+
+Lian 1999
+
+Tetlock 2007
+
+\hypertarget{cnbc-mad-money}{%
+\subsubsection{CNBC/ Mad Money}\label{cnbc-mad-money}}
+
+Keasler 2010
+
+Karniochina 2009
+
+Bolster 2012
+
+Engelberg 2012
+
+Peress 2014
+
+Market efficiency in real time
+
+\hypertarget{new-media}{%
+\subsection{New Media}\label{new-media}}
+
+Da 2011
+
+Farrell 2020
+
+Campell 2019
+
+\hypertarget{social-media}{%
+\subsection{Social Media}\label{social-media}}
+
+Tumarkin 2001
+
+Antweiler 2004
+
+Echo Chambers
+
+Cookson 2021
+
+Heimer 2016
+
+Jame 2016
+
+Hailiang Chen
+
+Crawford 2018
+
+Bartov 2018 (sentiment)
+
+Chawla 2016
+
+Sanjiv 2007
+
+Herding and Social Effects
+
+Reddit's self-organised bull runs
+
+Musciotto 2018
+
+Ouimet 2020
+
+Ivkovic 2007
+
+Duflo 2003
+
+Duflo 2002
+
+Shiller 1989
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-boylston2021}{}%
+Boylston, Christian, Beatriz Palacios, Plamen Tassev, and Amy Bruckman.
+2021. ``WallStreetBets: Positions or Ban.''
+\url{http://arxiv.org/abs/2101.12110}.
+
+\leavevmode\hypertarget{ref-hasso2021}{}%
+Hasso, Tim, Daniel Müller, Matthias Pelster, and Sonja Warkulat. 2021.
+``Who Participated in the Gamestop Frenzy?'' \emph{TAF Working Paper No.
+58} 58 (February).
+
+\leavevmode\hypertarget{ref-lyocsa2021}{}%
+Lyócsa, Štefan, Eduard Baumöhl, and Tomáš Vŷrost. 2021. ``YOLO Trading:
+Riding the Herd During the Gamestop Episode.'' \emph{ZBW - Leibniz
+Information Centre for Economics, Working Paper}.
+\url{https://doi.org/http://hdl.handle.net/10419/230679}.
+
+\leavevmode\hypertarget{ref-macey2021}{}%
+Macey, Jonathan R. 2021. ``Securities Regulation as Class Warfare.''
+\emph{Columbia Business Law Review, Forthcoming}, February.
+\url{https://doi.org/http://dx.doi.org/10.2139/ssrn.3789706}.
+
+\leavevmode\hypertarget{ref-dimuzio2021}{}%
+Muzio, Tim Di. 2021. ``GameStop Capitalism. Wall Street Vs. The Reddit
+Rally (Part 1).'' \emph{University of Wollongong Working Paper}, 1--13.
+\url{https://doi.org/http://bnarchives.yorku.ca/673/}.
+
+\leavevmode\hypertarget{ref-wsbshop}{}%
+News, Wallstreetbets. 2020. ``Dissecting the Unique Lingo and Terminolgy
+Used in the Subreddit R/Wallstreetbets.''
+\url{\%22https://www.wallstreetbets.shop/blogs/news/dissecting-the-unique-lingo-and-terminology-used-in-the-subreddit-r-wallstreetbets\%22}.
+
+\leavevmode\hypertarget{ref-eaton2021}{}%
+Pagano, Gregory W., Clifton T. Green, Brian Roseman, and Yanbin Wu.
+2021. ``Zero-Commission Individual Investors, High Frequency Traders,
+and Stock Market Quality.'' \emph{Available at SSRN:
+Https://Ssrn.com/Abstract=3776874 or
+Http://Dx.doi.org/10.2139/Ssrn.3776874}, January.
+\url{https://doi.org/http://dx.doi.org/10.2139/ssrn.3776874}.
+
+\leavevmode\hypertarget{ref-pagano2020}{}%
+Pagano, Michael S., John Sedunov, and Raisa Velthuis. 2020. ``How Did
+Retail Investors Respond to the Covid-19 Pandemic? The Effect of
+Robinhood Brokerage Customers on Market Quality.'' \emph{Finance
+Research Letters, Forthcoming}, November.
+\href{https://doi.org/http://dx.doi.org/10.2139/ssrn.3703815\%20}{https://doi.org/http://dx.doi.org/10.2139/ssrn.3703815}.
+
+\leavevmode\hypertarget{ref-welch2020}{}%
+Welch, Ivo. 2020. ``The Wisdom of the Robinhood Crowd.'' \emph{NBER
+Working Paper Series}, September.
+\url{https://doi.org/http://www.nber.org/papers/w27866}.
+
+
+
+
+
+\newpage
+\singlespacing 
+\end{document}
