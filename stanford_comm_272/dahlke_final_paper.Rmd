@@ -62,91 +62,24 @@ Wall Street Bets is a subreddit where investors talk about their stock trades. T
 
 # Information and Media
 
-Efficient market hypothesis
+Scholars have been particularly interested with the role of information on financial markets. Business researchers largely operate under the efficient market hypothesis where markets reflect accurate valuations based on available information. As such, they are primarily interested in whether information being spread about companies is timely or "stale" and the effects of media attention on stocks, media including television, newspaper, digital news, and social media on financial markets. Overall, media attention-driven behavior favors individuals buying stocks opposed to selling stocks [@barber2007].
 
-Tetlock: 2011
+## Newspapers
 
-Attention
+Even though one may think of the stock market reacting to news instantaneously, media attention given to individual stocks via newspapers impact the pricing of the stock. The causal link between newspapers impacting trading prices and volumes was established by leveraging newspaper strikes and observing the subsequent impact on financial markets [@peress2014]. This effect persists for many days after public, and the impact is prolonged during a recession compared to an expansion [@antweiler2006]. However, not all coverage is good coverage. Stocks with little or no attention in newspapers earn higher returns than high-media-attention stocks [@fang2009].
 
-Barber and Odean 2008
+Stock market investors respond differently to new versus stale news--as defined by textual similarity of sequential newspaper stories. The prices of stocks respond less to stale news, but there is a reversal in the movement of a stock's price after stale news, suggesting that initial movements are overreactions [@tetlock2011]. Further, quantitative information is easier for news readers to process compared to qualitative information [@engelberg2008].
 
-Engelberg 2008
+In addition, it is not just substantive news about a stock that impacts performance, stock recommendations in the _Wall Street Journal's_ "Dartboard" column predicted abnormal positive returns of 4% and double the trading volume over the two days after the column recommended a stock [@barber1993]. These market abnormalities are largely driven by naive investors and are ultimately noise in the financial markets. Price movements from the column were reversed within 15 days, and investors following the "expert" recommendations of the column lost 3.8% on a risk-adjusted basis in the six months following the recommendation [@liang1999]. These findings show that media content has a clear relationship with asset prices and should not be seen as a "sideshow," are consistent with the theoretical models of retail investors acting as noise in the financial ecosystem, and is inconsistent with the theory that media can serve as a proxy for new financial information that informs the efficient market on fundamental asset valuations [@tetlock2007]. 
 
-Antweiler
+## Television
 
-## Mass Media
-
-Fang 2009
-
-### Wall Street Journal
-
-Barber 1993
-
-Lian 1999
-
-Tetlock 2007
-
-### CNBC/ Mad Money
-
-Keasler 2010
-
-Karniochina 2009
-
-Bolster 2012
-
-Engelberg 2012
-
-Peress 2014
-
-Market efficiency in real time
-
-## New Media
-
-Da 2011
-
-Farrell 2020
-
-Campell 2019
+Similar to newspapers, the financial markets react to media content on television, often in real-time. When the TV program "The Morning Call" on _CNBC_ reports analyst views on individuals stocks, the market reacts within seconds, the price is fully incorporated within one minute, and trading intensity in the stock doubles within that first minute [@busse2002]. "Mad Money with Jim Cramer" is a popular _CNBC_ television show where the host, Jim Cramer, makes a bevy of buy and sell recommendations on stocks. There are significant price movements for stocks that Cramer recommends to buy and sell [@bolster2012; @engelberg2012; @karniouchina2009]. The effects on the movement of stocks given a "buy" rating from Cramer are quickly reversed, but the effect persists longer for "sell" recommendations [@bolster2012]. The viewing ratings of the show even predicts the strength of the price movements [@engelberg2012]. Further, tradition advertising variables, such as message length, recency-primacy effects, information clutter, and source credibility all influence the size of the market reaction to a "buy" recommendation from Cramer [@karniouchina2009], which potentially suggests that content consumers process media from financial pundits similarly to other types of advertising. 
 
 ## Social Media
 
-Tumarkin 2001
 
-Antweiler 2004
 
-Echo Chambers
-
-Cookson 2021
-
-Heimer 2016
-
-Jame 2016
-
-Hailiang Chen 
-
-Crawford 2018
-
-Bartov 2018 (sentiment)
-
-Chawla 2016
-
-Sanjiv 2007
-
-Herding and Social Effects
-
-Reddit's self-organised bull runs
-
-Musciotto 2018
-
-Ouimet 2020
-
-Ivkovic 2007
-
-Duflo 2003
-
-Duflo 2002
-
-Shiller 1989
 
 
 
