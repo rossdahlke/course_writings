@@ -20,6 +20,7 @@ fontfamily: mathpazo
 fontsize: 12pt
 spacing: double
 bibliography: bibliography.bib
+csl: ../../apa.csl
 biblio-style: apa
 header-includes: \usepackage{graphicx}
 ---
