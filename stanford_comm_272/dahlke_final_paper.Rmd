@@ -20,7 +20,7 @@ fontfamily: mathpazo
 fontsize: 12pt
 spacing: double
 bibliography: bibliography.bib
-biblio-style: apsr
+biblio-style: "apalike"
 header-includes: \usepackage{graphicx}
 ---
 
