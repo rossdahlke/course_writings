@@ -1,6 +1,11 @@
 ---
 output:
-  word_document:
+  pdf_document:
+    keep_tex: true
+    fig_caption: true
+    latex_engine: pdflatex
+    template: ../../svm-latex-ms.tex
+#  word_document:
 #always_allow_html: yes
 title: "Regime Change and Information Control"
 thanks: " "
