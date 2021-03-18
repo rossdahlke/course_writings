@@ -1,6 +1,11 @@
 ---
 output:
-  word_document:
+  pdf_document:
+    keep_tex: true
+    fig_caption: true
+    latex_engine: pdflatex
+    template: ../svm-latex-ms.tex
+#  word_document:
 #always_allow_html: yes
 title: "Retail investors and media psychology"
 thanks: " "
@@ -66,13 +71,13 @@ There are two primary ways to define news: new versus stale and quantitative ver
 
 In addition, it is not just substantive news about a stock that impacts performance. Stock recommendations in the _Wall Street Journal's_ "Dartboard" column, one of the original mass-consumer stock recommendation media, predicted abnormal positive returns of 4% and double the trading volume over the two days after the column recommended a stock [@barber1993]. These market abnormalities are largely driven by naive investors and are ultimately noise in the financial markets. Price movements from the column were reversed within 15 days, and investors following the "expert" recommendations of the column lost 3.8% on a risk-adjusted basis in the six months following the recommendation [@liang1999]. These findings show that media content has a clear relationship with asset prices and should not be seen as a "sideshow." They are also consistent with the theoretical models of retail investors acting as noise in the financial ecosystem. And the findings are inconsistent with the theory that media can serve as a proxy for new financial information that informs the efficient market on fundamental asset valuations [@tetlock2007].
 
-While business scholars strictly look for how media content can drive the price of stocks higher or lower, media psychologies also study the psychological effects of content. For example, media psychologists study the visceral effects of encountering violent news stories or pornography. A similar approach can be taken to studying financial news and positive versus negative stories of firms.
+While business scholars strictly look for how media content can drive the price of stocks higher or lower, media researchers also study the psychological effects of the content. For example, media psychologists study the visceral effects of encountering violent news stories or pornography. A similar approach can be taken to studying financial news and positive versus negative stories of firms.
 
 ## Television
 
 Similar to newspapers, the financial markets react to media content on television, often in real-time. The live nature of television has shifted academic focus from new versus stale news and instead looks for near-instantaneous market reactions. When the TV program "The Morning Call" on _CNBC_ reports analyst views on individual stocks, the market reacts within seconds, the price is fully incorporated within one minute, and trading intensity in the stock doubles within that first minute [@busse2002]. "Mad Money with Jim Cramer" is a popular _CNBC_ television show where the titular host, Jim Cramer, makes a bevy of buy and sell recommendations on stocks. There are significant price movements for stocks that Cramer recommends to buy and sell [@bolster2012; @engelberg2012; @karniouchina2009]. The effects on the movement of stocks given a "buy" rating from Cramer are quickly reversed, but the effect persists longer for "sell" recommendations [@bolster2012]. The viewing ratings of the show even predict the strength of the price movements [@engelberg2012]. 
 
-Business scholars and media psychologists take fundamentally different approaches to studying television. Business scholars examine discrete pieces of media in a vacuum--there is little consideration for broader media ecology or content that is consumed before or after the specific media content being studied. In the case of television, business scholars will study a specific segment on television without concern for the content before or after the specific segment. In contrast, media psychologists study the increasing fragmentation of the media landscape. The information just before a television segment can prime the media consumer. Or, a television watcher can take out their cell phone and look at related content while a media segment is ongoing. Business scholars do not consider any of these media consumption realities. Perhaps, controlling for these other factors can reveal an even stronger effect of media on the prices of stocks.
+Business scholars and media psychologists take fundamentally different approaches to studying television. Business scholars examine discrete pieces of media in a vacuum--there is little consideration for the broader media ecology. In the case of television, business scholars will study a specific segment on television without concern for the content before or after the specific segment. In contrast, media psychologists study the increasing fragmentation of the media landscape. The information just before a television segment can prime the media consumer. Or, a television watcher can take out their cell phone and look at related content while a media segment is ongoing. Business scholars do not consider any of these media consumption realities. Potentially, controlling for these other factors can reveal an even stronger effect of media on the prices of stocks.
 
 ## Social Media
 
@@ -88,7 +93,7 @@ Next, social media have been studied as a way to crowdsource financial advice. F
 
 Finally, social media can create "herding" by which there is behavioral contagion that flows through networks of investors via their connections on social media. Social network links increase disposition effects [@heimer2016], which is the tendency to sell "winning" assets and hold onto "losing" assets [@shefrin1985]. Herding is particularly prominent on Robinhood [@barber2021]. And the GameStop saga provides evidence for the idea of behavioral contagion among r/WallStreetBets users [@semenova2021]. On StockTwits there is even evidence of echo chambers where users selectively expose themselves to other users who share positive or negative sentiments on specific stocks [@cookson2020]. The herding behavior found in online investor communities also happens in offline networks [@duflo2002; @duflo2003; @ivkovic2007; @musciotto2018; @shiller1989]. Potentially, this similarity between online and offline social behavioral contagion can add to the digitization and social network literature.
 
-Herding behavior is very similar to how media psychologists have found social norms to impact behavioral change. For example, making people believe that all of their neighbors are recycling, an individual is more likely to also recycle. Similarly, if an investor in an online community perceives that everyone is purchasing GameStop stock, they are likely to also participate in that newly-perceived social norm.
+Herding behavior is very similar to how media psychologists have found social norms to impact behavioral change. For example, making people believe that all of their neighbors are recycling will encourage an individual to also start recycling. Similarly, if an investor in an online community perceives that everyone is purchasing GameStop stock, they are likely to also participate in that newly-perceived social norm.
 
 # Conclusion & Future Media Psychology Research
 
