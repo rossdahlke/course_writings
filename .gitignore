@@ -41,3 +41,5 @@ vignettes/*.pdf
 # R project
 .Rproj
 *.Rproj
+
+.DS_Store
