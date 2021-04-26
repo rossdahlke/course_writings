@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Baron and Kenny (1986)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ross Dahlke" />
+    <meta name="date" content="2021-04-13" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Baron and Kenny (1986)
+## The Moderator-Mediator Variable Distinction in Social Psychological Research: Conceptual, Strategic, and Statistical Considerations
+### Ross Dahlke
+### Stanford University
+### April 13, 2021
+
+---
+
+
+
+
+
+
+# Moderation ≠ Mediation
+
+---
+
+# Moderation ≠ Mediation
+
+   - Example: 2020 ANES Pilot
+   - What makes people like or dislike feminists?
+
+
+
+---
+
+# Example
+
+![](week_03_bk_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+
+---
+
+# Example
+
+![](week_03_bk_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+---
+
+# Example
+
+![](week_03_bk_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+
+---
+
+# Example
+
+
+```r
+lm(ftfeminists ~ fttrump1, data = anes) %&gt;% 
+  summary() 
+```
+
+```
+## 
+## Call:
+## lm(formula = ftfeminists ~ fttrump1, data = anes)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -62.646 -23.349   2.229  22.354  70.520 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 62.64559    0.81769   76.61   &lt;2e-16 ***
+## fttrump1    -0.33166    0.01427  -23.24   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 30.34 on 2991 degrees of freedom
+## Multiple R-squared:  0.153,	Adjusted R-squared:  0.1527 
+## F-statistic: 540.2 on 1 and 2991 DF,  p-value: &lt; 2.2e-16
+```
+
+
+
+---
+![](week_03_bk_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+---
+
+
+```r
+lm(ftrepublicanparty ~ ftcapitalists * as.factor(race7), data = anes) %&gt;% 
+  summary()
+```
+
+```
+## 
+## Call:
+## lm(formula = ftrepublicanparty ~ ftcapitalists * as.factor(race7), 
+##     data = anes)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -487.06  -29.21    1.48   26.03  956.97 
+## 
+## Coefficients:
+##                                   Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)                      39.844523   1.214764  32.800  &lt; 2e-16 ***
+## ftcapitalists                     0.151994   0.009868  15.403  &lt; 2e-16 ***
+## as.factor(race7)2               -33.274776   3.328784  -9.996  &lt; 2e-16 ***
+## as.factor(race7)3               -15.438281  11.086161  -1.393   0.1639    
+## as.factor(race7)4                 1.307691   6.143133   0.213   0.8314    
+## as.factor(race7)5               -27.907707   5.151174  -5.418 6.52e-08 ***
+## as.factor(race7)6               -18.590641  20.672502  -0.899   0.3686    
+## as.factor(race7)7               -10.112913  35.313483  -0.286   0.7746    
+## as.factor(race7)9               -39.844523  47.573946  -0.838   0.4024    
+## ftcapitalists:as.factor(race7)2   0.328973   0.034140   9.636  &lt; 2e-16 ***
+## ftcapitalists:as.factor(race7)3   0.144113   0.191520   0.752   0.4518    
+## ftcapitalists:as.factor(race7)4  -0.116849   0.049692  -2.351   0.0188 *  
+## ftcapitalists:as.factor(race7)5   0.449782   0.088377   5.089 3.82e-07 ***
+## ftcapitalists:as.factor(race7)6   0.219076   0.414045   0.529   0.5968    
+## ftcapitalists:as.factor(race7)7   0.476347   0.558895   0.852   0.3941    
+## ftcapitalists:as.factor(race7)9   1.014673   1.121006   0.905   0.3655    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 47.56 on 2977 degrees of freedom
+## Multiple R-squared:  0.1586,	Adjusted R-squared:  0.1543 
+## F-statistic:  37.4 on 15 and 2977 DF,  p-value: &lt; 2.2e-16
+```
+
+
+```r
+lm(fttrump1 ~ ftrepublicanparty, data = anes) %&gt;% 
+  summary()
+```
+
+```
+## 
+## Call:
+## lm(formula = fttrump1 ~ ftrepublicanparty, data = anes)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -405.56  -24.31   -3.69   28.86   75.69 
+## 
+## Coefficients:
+##                   Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)       24.31063    0.81421   29.86   &lt;2e-16 ***
+## ftrepublicanparty  0.38764    0.01177   32.92   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 33.31 on 2991 degrees of freedom
+## Multiple R-squared:  0.266,	Adjusted R-squared:  0.2658 
+## F-statistic:  1084 on 1 and 2991 DF,  p-value: &lt; 2.2e-16
+```
+
+
+```r
+ggplot(anes %&gt;% filter(ftfeminists &lt;= 100 &amp; fttrump1 &lt;= 100), aes(fttrump1, ftfeminists)) +
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  theme_bw()
+```
+
+```
+## `geom_smooth()` using formula 'y ~ x'
+```
+
+![](week_03_bk_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
+
+```r
+lm(ftmetoo ~ fttrump1, data = anes %&gt;% filter(ftfeminists &lt;= 100, fttrump1 &lt;= 100)) %&gt;% 
+  summary()
+```
+
+```
+## 
+## Call:
+## lm(formula = ftmetoo ~ fttrump1, data = anes %&gt;% filter(ftfeminists &lt;= 
+##     100, fttrump1 &lt;= 100))
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -64.432 -26.853   1.604  25.340  72.340 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 64.43165    0.83965   76.74   &lt;2e-16 ***
+## fttrump1    -0.36771    0.01465  -25.09   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 31.15 on 2991 degrees of freedom
+## Multiple R-squared:  0.1739,	Adjusted R-squared:  0.1737 
+## F-statistic: 629.8 on 1 and 2991 DF,  p-value: &lt; 2.2e-16
+```
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

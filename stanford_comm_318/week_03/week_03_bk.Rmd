@@ -1,0 +1,200 @@
+---
+title: "Baron and Kenny (1986)"
+subtitle: "The Moderator-Mediator Variable Distinction in Social Psychological Research: Conceptual, Strategic, and Statistical Considerations"
+author: "Ross Dahlke"
+institute: "Stanford University"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+library(tidyverse)
+library(ggdag)
+theme_set(theme_dag())
+style_mono_accent_inverse(
+  base_color = "#8C1515",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r include = FALSE}
+anes <- read_csv("anes_pilot_2020ets_csv.csv") %>% 
+  filter(fttrump1 <= 100,
+         ftfeminists <= 100,
+         ftmetoo <= 100)
+```
+
+# Moderation ≠ Mediation
+
+---
+
+# Moderation ≠ Mediation
+
+   - Example: 2020 ANES Pilot
+   - What makes people like or dislike feminists?
+
+```{r include = F}
+coords <- tribble(
+  ~name, ~x, ~y,
+  "fttrump1", 1, 1,
+  "ftfeminists", 2, 1,
+  "gender", 1.5, 0,
+  "holder", 1.5, 1,
+  "ftmetoo", 1.5, 1.5
+)
+```
+
+---
+
+# Example
+
+```{r echo = F, fig.height = 8, fig.width = 12}
+dagify(ftfeminists ~ fttrump1,
+       coords = coords,
+       labels = c("ftfeminists" = "Rate Feminists",
+                  "fttrump1" = "",
+                  "gender" = "gender",
+                  "holder" = "moderator",
+                  "ftmetoo" = "Rate #MeToo")) %>% 
+  ggdag(text = FALSE, use_labels = "label") 
+```
+
+---
+
+# Example
+
+```{r echo = F, fig.height = 8, fig.width = 12}
+dagify(ftfeminists ~ fttrump1,
+       coords = coords,
+       labels = c("ftfeminists" = "Rate Feminists",
+                  "fttrump1" = "Rate Trump",
+                  "gender" = "gender",
+                  "holder" = "moderator",
+                  "ftmetoo" = "Rate #MeToo")) %>% 
+  ggdag(text = FALSE, use_labels = "label") 
+```
+
+---
+
+# Example
+
+```{r echo = F, warning =F, message = F, fig.height = 6, fig.width = 8}
+ggplot(anes, aes(fttrump1, ftfeminists)) +
+  geom_point(alpha = .1) +
+  geom_smooth(method = "lm") +
+  labs(x = "Rate Trump",
+       y = "Rate Feminists") +
+  theme_bw()
+```
+
+---
+
+# Example
+
+```{r}
+lm(ftfeminists ~ fttrump1, data = anes) %>% 
+  summary() 
+```
+
+---
+
+```{r echo = F, fig.height = 8, fig.width = 12}
+dagify(ftfeminists ~ fttrump1,
+       holder ~ gender,
+       coords = coords,
+       labels = c("ftfeminists" = "Rate Feminists",
+                  "fttrump1" = "Rate Trump",
+                  "gender" = "gender",
+                  "holder" = "moderator",
+                  "ftmetoo" = "Rate #MeToo")) %>% 
+  ggdag(text = FALSE, use_labels = "label") 
+```
+
+---
+
+# Moderator
+
+```{r}
+ggplot(anes, aes(fttrump1, ftfeminists, color = as.factor(sex), group = as.factor(sex))) +
+  geom_point(alpha = .1) +
+  geom_smooth(method = "lm") +
+  scale_color_manual(values = c("blue", "red"), labels = c("Male", "Female")) +
+  labs(x = "Rate Trump",
+       y = "Rate Feminists") +
+  theme_bw()
+```
+
+---
+
+# Moderator
+
+```{r}
+lm(ftfeminists ~ fttrump1 * as.factor(sex), data = anes) %>% 
+  summary() 
+```
+
+# Mediator
+
+```{r echo = F, fig.height = 8, fig.width = 12}
+dagify(ftfeminists ~ fttrump1,
+       ftmetoo ~ fttrump1,
+       ftfeminists ~ ftmetoo,
+       # holder ~ gender,
+       coords = coords,
+       labels = c("ftfeminists" = "Rate Feminists",
+                  "fttrump1" = "Rate Trump",
+                  "gender" = "gender",
+                  "holder" = "moderator",
+                  "ftmetoo" = "Rate #MeToo")) %>% 
+  ggdag(text = FALSE, use_labels = "label") 
+```
+
+---
+```{r echo = F, fig.height = 8, fig.width = 12}
+dagify(ftfeminists ~ fttrump1,
+       ftmetoo ~ fttrump1,
+       ftfeminists ~ ftmetoo,
+       holder ~ gender,
+       coords = coords,
+       labels = c("ftfeminists" = "Rate Feminists",
+                  "fttrump1" = "Rate Trump",
+                  "gender" = "gender",
+                  "holder" = "moderator",
+                  "ftmetoo" = "Rate #MeToo")) %>% 
+  ggdag(text = FALSE, use_labels = "label") 
+```
+
+---
+
+```{r}
+lm(ftrepublicanparty ~ ftcapitalists * as.factor(race7), data = anes) %>% 
+  summary()
+```
+
+```{r}
+lm(fttrump1 ~ ftrepublicanparty, data = anes) %>% 
+  summary()
+```
+
+```{r}
+ggplot(anes %>% filter(ftfeminists <= 100 & fttrump1 <= 100), aes(fttrump1, ftfeminists)) +
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  theme_bw()
+```
+
+```{r}
+lm(ftmetoo ~ fttrump1, data = anes %>% filter(ftfeminists <= 100, fttrump1 <= 100)) %>% 
+  summary()
+```
+
